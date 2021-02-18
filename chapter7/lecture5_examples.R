@@ -109,7 +109,7 @@ z.interval2pop <- function(p_hat_F, p_hat_M, crit, SE) {
 }
 
 # Calculation of Z-Interval
-z.interval(p_tilde, crit, SE)
+z.interval2pop(p_hat_F, p_hat_M, crit, SE)
 
 #############################################################################
 
