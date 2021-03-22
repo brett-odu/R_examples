@@ -1,8 +1,8 @@
-x <- skincancer$Lat
-y <- skincancer$Mort
+x <- c(73, 71, 82, 93, 96)
+y <- c(79, 36, 49, 84, 99)
 
-plot(x, y, xlab = "Lat",
-     ylab = "Mort", pch=16)
+plot(x, y, xlab = "Midterm Exam Grades",
+     ylab = "Final Exam Grades", pch=16)
 
 cor(x,y)
 
@@ -11,23 +11,28 @@ m
 
 abline(m, col = "red")
 
-new.x <- x - mean(x)
-lm(y ~ new.x)
-
 m1 <- lm(y ~ I(x - mean(x)))
 m1
 
 summary(m1)
 
+# MSE
+summary(m1)$sigma^2
+
+mean(x)
+mean(y)
+
+# CI for slope parameter beta
 confint(m1, level = 0.95)
 
-predict(m, newdata = data.frame(x = 40), interval = "confidence")
-predict(m, newdata = data.frame(x = 40), interval = "confidence", level = 0.95)
-predict(m, newdata = data.frame(x = 40), interval = "predict")
+predict(m, newdata = data.frame(x = 85), interval = "confidence")
+predict(m, newdata = data.frame(x = 85), interval = "confidence", level = 0.95)
+
+predict(m, newdata = data.frame(x = 85), interval = "predict")
 
 resid(m1)
 
-plot(x,resid(m1),ylab="Residuals",xlab="x", main="Residual plot for data in skincancer.txt", pch=16)
+plot(x,resid(m1),ylab="Residuals",xlab="x", main="Residual plot for data in Table 6.5-1", pch=16)
 abline(h=0) #adds a line through the x-axis
 
 #Difference between confidence and prediction intervals

@@ -17,6 +17,9 @@ m1
 
 summary(m1)
 
+# MSE
+summary(m1)$sigma^2
+
 confint(m1, level = 0.95)
 
 predict(m, newdata = data.frame(x = 60), interval = "confidence")
