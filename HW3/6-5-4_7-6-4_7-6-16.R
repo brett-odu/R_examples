@@ -72,6 +72,3 @@ predict(m, newdata = data.frame(x = 4), interval = "predict")
 
 # CI for regression parameters α and β.
 confint(m1, level = 0.95)
-
-# CI for regression parameter σ^2.
-# ????????????????

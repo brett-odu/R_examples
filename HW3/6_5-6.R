@@ -38,3 +38,11 @@ resid(m1)
 resid(m1)^2
 # point estimator for σ^2
 sum(resid(m1)^2)/15
+
+
+# 7.6-20. Using the ACT scores in Exercise 6.5-6, find 95%
+# confidence intervals for α, β, and σ^2 under the usual
+# assumptions.
+
+# CI for regression parameters α and β.
+confint(m1, level = 0.95)
