@@ -1,8 +1,8 @@
-x <- c(73, 71, 82, 93, 96)
-y <- c(79, 36, 49, 84, 99)
+x <- c(2.0, 3.3, 3.7, 2.0, 2.3, 2.7, 4.0, 3.7, 3.0, 2.3)
+y <- c(1.3, 3.3, 3.3, 2.0, 1.7, 3.0, 4.0, 3.0, 2.7, 3.0)
 
-plot(x, y, xlab = "Midterm Exam Grades",
-     ylab = "Final Exam Grades", pch=16)
+plot(x, y, xlab = "Predicted Grades",
+     ylab = "Earned Grades", pch=16)
 
 cor(x,y)
 
